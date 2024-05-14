@@ -33,21 +33,36 @@ class BottomNaviationBar extends StatelessWidget {
                   index: index,
                 )));
       },
-      items: const [
+      items: [
         BottomNavigationBarItem(
-            icon: Icon(Icons.shop_outlined, color: Color(0xff181725)),
+            icon: Icon(Icons.shop_outlined,
+                color: (currentIndex != 0)
+                    ? const Color(0xff181725)
+                    : const Color(0xff53b175)),
             label: 'shop'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.explore_outlined, color: Color(0xff181725)),
+            icon: Icon(Icons.explore_outlined,
+                color: (currentIndex != 1)
+                    ? const Color(0xff181725)
+                    : const Color(0xff53b175)),
             label: 'Explore'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart, color: Color(0xff181725)),
+            icon: Icon(Icons.shopping_cart,
+                color: (currentIndex != 2)
+                    ? const Color(0xff181725)
+                    : const Color(0xff53b175)),
             label: 'Cart'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline, color: Color(0xff181725)),
+            icon: Icon(Icons.favorite_outline,
+                color: (currentIndex != 3)
+                    ? const Color(0xff181725)
+                    : const Color(0xff53b175)),
             label: 'Favorite'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.person, color: Color(0xff181725)),
+            icon: Icon(Icons.person,
+                color: (currentIndex != 4)
+                    ? const Color(0xff181725)
+                    : const Color(0xff53b175)),
             label: 'Profile Account')
       ],
     );

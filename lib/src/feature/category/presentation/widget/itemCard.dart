@@ -62,6 +62,9 @@ class ItemCard extends StatelessWidget {
                           context
                               .read<CartScreenCubit>()
                               .addItemLocal(shopItem: shopItem, amount: 1);
+                          ScaffoldMessenger.of(context).clearSnackBars();
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('added To Cart')));
                         },
                         icon: Container(
                           alignment: Alignment.center,
