@@ -9,16 +9,18 @@ class NotImplemented extends StatelessWidget {
   const NotImplemented({
     super.key,
     this.index,
+    this.title = 'Not Implemented',
   });
 
   final int? index;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Not Implemented',
+          title,
           style: GoogleFonts.poppins().copyWith(fontSize: 24),
         ),
       ),
@@ -32,7 +34,7 @@ class NotImplemented extends StatelessWidget {
           ),
           PrimaryButton(
             buttonTitle: 'Go Back',
-            onTap: () => Navigator.of(context).pop(),
+            onTap: () {},
           )
         ],
       ),

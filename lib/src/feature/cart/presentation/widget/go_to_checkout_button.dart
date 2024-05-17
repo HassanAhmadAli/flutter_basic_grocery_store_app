@@ -63,7 +63,8 @@ class GoToCheckoutBotton extends StatelessWidget {
                             'Select Method',
                             style: GoogleFonts.poppins().copyWith(
                                 fontSize: 16, fontWeight: FontWeight.w400),
-                          )
+                          ),
+                          Icon(Icons.arrow_back_ios_outlined)
                         ],
                       ),
                       const Divider(),
@@ -75,7 +76,10 @@ class GoToCheckoutBotton extends StatelessWidget {
                                 fontSize: 18,
                                 color: Color(0xFF7C7C7C),
                                 fontWeight: FontWeight.w400),
-                          )
+                          ),
+                          Spacer(),
+                          Image.asset('assets/photo/visa.png'),
+                          Icon(Icons.arrow_back_ios_outlined)
                         ],
                       ),
                       const Divider(),
@@ -92,7 +96,8 @@ class GoToCheckoutBotton extends StatelessWidget {
                           Text(
                             'Pick Discount',
                             style: GoogleFonts.poppins().copyWith(fontSize: 16),
-                          )
+                          ),
+                          Icon(Icons.arrow_back_ios_outlined)
                         ],
                       ),
                       const Divider(),
@@ -106,7 +111,8 @@ class GoToCheckoutBotton extends StatelessWidget {
                                 fontWeight: FontWeight.w400),
                           ),
                           const Spacer(),
-                          Text('\$$totalPrice')
+                          Text('\$$totalPrice'),
+                          Icon(Icons.arrow_back_ios_outlined)
                         ],
                       ),
                       const Divider(),
@@ -119,7 +125,8 @@ class GoToCheckoutBotton extends StatelessWidget {
                       PrimaryButton(
                         buttonTitle: 'Place Order',
                         onTap: () {
-                          Navigator.of(context).pushNamed(OrderAccepted.route);
+                          Navigator.of(context)
+                              .pushReplacementNamed(OrderAccepted.route);
                         },
                       )
                     ],

@@ -1,0 +1,11 @@
+flutter_native_splash:
+  #  color: "#53b175"
+  background_image: "assets/photo/splashimage.png"
+  #  image: assets/photo/logo.png
+  #  branding: assets/photo/logo.png
+  android_12:
+    #    image: assets/photo/logo.png
+    color: "#53b175"
+    icon_background_color: "#53b175"
+    branding: assets/photo/logo.png
+    branding_mode: center

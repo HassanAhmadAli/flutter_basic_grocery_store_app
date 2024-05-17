@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,11 +20,17 @@ class CartItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(
-          shopItem.imagePath,
-          width: 80.w,
-          height: 80.h,
-        ),
+        (shopItem.imageLocation == ImageLocation.assets)
+            ? Image.asset(
+                shopItem.imagePath,
+                width: 100.w,
+                height: 100.h,
+              )
+            : Image.file(
+                File(shopItem.imagePath),
+                width: 100.w,
+                height: 100.h,
+              ),
         const Spacer(),
         Column(
           children: [

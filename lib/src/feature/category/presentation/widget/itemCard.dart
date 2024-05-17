@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -30,11 +32,17 @@ class ItemCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                shopItem.imagePath,
-                width: 100.w,
-                height: 100.h,
-              ),
+              (shopItem.imageLocation == ImageLocation.assets)
+                  ? Image.asset(
+                      shopItem.imagePath,
+                      width: 100.w,
+                      height: 100.h,
+                    )
+                  : Image.file(
+                      File(shopItem.imagePath),
+                      width: 100.w,
+                      height: 100.h,
+                    ),
               Text(
                 shopItem.name,
                 style: GoogleFonts.poppins().copyWith(),
